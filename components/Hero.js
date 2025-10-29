@@ -20,14 +20,16 @@ const slides = [
     image: "/images/Hero1.avif",
     location: "CHANDRAPUR",
     title: "NAAVA",
-    offer: "Indulge in a culinary journey that blends tradition with modernity, crafted for discerning palates.",
+    offer:
+      "Indulge in a culinary journey that blends tradition with modernity, crafted for discerning palates.",
   },
   {
     id: 3,
     image: "/images/Hero2.avif",
     location: "CHANDRAPUR",
     title: "OUTDOOR CATERING",
-    offer: "Siddharth Group also specializes in outdoor catering, offering not just delicious food but complete arrangements.",
+    offer:
+      "Siddharth Group also specializes in outdoor catering, offering not just delicious food but complete arrangements.",
   },
 ];
 
@@ -58,11 +60,9 @@ export default function Hero() {
           priority
           className="object-cover object-center transition-all duration-[1200ms] ease-in-out"
         />
-
-        {/* Overlay gradient */}
         <div className="absolute inset-0 bg-black/20"></div>
 
-        {/* Desktop Text Box (centered overlay) */}
+        {/* Desktop Text Box */}
         <div className="hidden md:flex absolute inset-0 justify-center items-center z-10">
           <div className="bg-white/10 backdrop-blur-sm px-12 py-10 rounded-2xl text-center max-w-2xl border border-white/20">
             <p
@@ -119,11 +119,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating Text Box for Mobile */}
-      {/* Floating Text Box for Mobile */}
-<div className="md:hidden relative z-20 -mt-14 px-4">
-  <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0)] px-6 py-5 text-center border border-gray-500">
-
+      {/* Mobile Text Box with Arrows Inside */}
+      <div className="md:hidden relative z-20 -mt-14 px-4">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0)] px-6 py-5 text-center border border-gray-500">
           <p
             className={`${barlow.className} text-gray-600 text-xs tracking-[3px] uppercase`}
           >
@@ -147,6 +145,22 @@ export default function Hero() {
           >
             EXPLORE NOW →
           </button>
+
+          {/* Mobile Arrows Inside Text Box */}
+          <div className="flex justify-center gap-6 mt-4">
+            <button
+              onClick={prevSlide}
+              className="bg-gray-900 text-white p-2 rounded-full active:scale-95 transition"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-gray-900 text-white p-2 rounded-full active:scale-95 transition"
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
         </div>
       </div>
     </section>
