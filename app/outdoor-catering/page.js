@@ -12,14 +12,13 @@ const barlow = Barlow({ weight: ["400", "600"], subsets: ["latin"] });
 export default function OutdoorCatering() {
   const whatsapp = "https://wa.me/918412800000";
   const images = [
-    "/outdoor/gallery1.jpg",
-    "/outdoor/gallery2.jpg",
-    "/outdoor/gallery3.jpg",
-    "/outdoor/gallery4.jpg",
-    "/outdoor/gallery5.jpg",
-    "/outdoor/gallery6.jpg",
-    "/outdoor/gallery7.jpg",
-    "/outdoor/gallery8.jpg",
+    "/outdoor/O1.webp",
+    "/outdoor/O2.avif",
+    "/outdoor/O3.avif",
+    "/outdoor/O4.avif",
+    "/outdoor/O5.avif",
+    "/outdoor/O6.avif",
+    
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -52,7 +51,7 @@ export default function OutdoorCatering() {
             >
               🍽️ Chandrapur
             </p>
-            <h1 className="text-3xl md:text-5xl font-serif text-gray-800 mb-4">
+            <h1 className={`${italiana.className} text-4xl md:text-5xl text-gray-800 mb-4`}>
               Outdoor Catering
             </h1>
             <p

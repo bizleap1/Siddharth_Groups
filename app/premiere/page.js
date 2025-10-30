@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Italiana, Barlow } from "next/font/google";
+import Facilities from "../../components/Facilities";
 
 const italiana = Italiana({ weight: "400", subsets: ["latin"] });
 const barlow = Barlow({ weight: ["400", "600"], subsets: ["latin"] });
@@ -34,7 +35,7 @@ export default function Premiere() {
       <p className="text-gray-600 text-sm font-semibold tracking-[3px] uppercase mb-3">
         📍 Chandrapur
       </p>
-      <h1 className="text-3xl md:text-5xl font-serif text-gray-800 mb-4">
+      <h1 className={`${italiana.className} text-4xl md:text-5xl text-gray-800 mb-4`}>
         Siddharth Premiere
       </h1>
       <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
@@ -85,7 +86,7 @@ export default function Premiere() {
                   className="group relative overflow-hidden rounded-xl shadow-lg"
                 >
                   <Image 
-                    src={`/premiere/room${item}.jpg`} 
+                    src={`/images/room${item}.avif`} 
                     alt={`Luxury Room ${item}`}
                     width={600}
                     height={400}
@@ -96,6 +97,7 @@ export default function Premiere() {
               ))}
             </div>
           </motion.div>
+          
 
           {/* Bliss & Vibe Banquet Section */}
           <motion.div 
@@ -120,7 +122,7 @@ export default function Premiere() {
                   className="group relative overflow-hidden rounded-xl shadow-lg"
                 >
                   <Image 
-                    src={`/premiere/banquet${item}.jpg`} 
+                    src={`/images/P2${item}.avif`} 
                     alt={`Banquet ${item}`}
                     width={600}
                     height={400}
@@ -155,7 +157,7 @@ export default function Premiere() {
                   className="group relative overflow-hidden rounded-xl shadow-lg"
                 >
                   <Image 
-                    src={`/premiere/food${item}.jpg`} 
+                    src={`/images/P3${item}.avif`} 
                     alt={`Gourmet Food ${item}`}
                     width={600}
                     height={400}

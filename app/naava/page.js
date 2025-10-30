@@ -12,14 +12,17 @@ const barlow = Barlow({ weight: ["400", "600"], subsets: ["latin"] });
 export default function Naava() {
   const whatsapp = "https://wa.me/918412800000";
   const images = [
-    "/naava/gallery1.jpg",
-    "/naava/gallery2.jpg",
-    "/naava/gallery3.jpg",
-    "/naava/gallery4.jpg",
-    "/naava/gallery5.jpg",
-    "/naava/gallery6.jpg",
-    "/naava/gallery7.jpg",
-    "/naava/gallery8.jpg",
+    "/naava/N1.jpg",
+    "/naava/N2.jpg",
+    "/naava/N3.jpg",
+    "/naava/N4.jpg",
+    "/naava/N5.jpg",
+    "/naava/N6.jpg",
+    "/naava/N7.jpg",
+    "/naava/N8.avif",
+    "/naava/N9.avif",
+    "/naava/N10.avif",
+    "/naava/N11.avif",
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);

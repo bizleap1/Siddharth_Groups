@@ -33,15 +33,15 @@ export default function Stats() {
           viewport={{ once: true }}
           className={`${barlow.className} text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto mb-16`}
         >
-          Rooted in excellence and hospitality, Siddharth Group brings together
-          luxury, comfort and timeless taste. From the refined stays at
+          Rooted in excellence, Siddharth Group brings together luxury,
+          comfort and timeless taste. From the refined stays at
           <span className="text-[#a07d56] font-semibold"> Siddharth Premier </span>
           to the exquisite flavors of{" "}
           <span className="text-[#a07d56] font-semibold">Curry Culture</span> and
           the heartfelt sweetness of{" "}
           <span className="text-[#a07d56] font-semibold">Bake My Cake</span>,
           every experience is crafted with care and passion. We don’t just offer
-          hospitality — we offer belonging.
+          service — we offer belonging.
         </motion.p>
 
         {/* IMAGE */}
@@ -51,11 +51,9 @@ export default function Stats() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
           className="relative mx-auto mb-20 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] rounded-3xl overflow-hidden shadow-2xl"
-
-
         >
           <Image
-            src="/images/About.avif" // your image
+            src="/images/About.avif"
             alt="Siddharth Group Interior"
             width={1200}
             height={700}
@@ -76,13 +74,12 @@ export default function Stats() {
               },
             },
           }}
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-12 justify-center"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-12 justify-center"
         >
           {[
             { value: 150, label: "Timeless Quality" },
             { value: 1500, label: "Trusted by Guests" },
             { value: 10, label: "Years of Excellence" },
-            { value: 5, label: "Hospitality Outlets" },
           ].map((stat, i) => (
             <motion.div
               key={i}

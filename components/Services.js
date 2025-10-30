@@ -12,30 +12,30 @@ const barlow = Barlow({ weight: ["400", "600"], subsets: ["latin"] });
 const services = [
   {
     id: 1,
-    image: "/images/service1.avif",
+    image: "/images/Service1.avif",
     title: "Luxury Stays",
     description:
       "Experience elegance and comfort at Siddharth Premier with unmatched premium hospitality.",
     tag: "Stay",
-    href: "/services/luxury-stays",
+    href: "/premiere",
   },
   {
     id: 2,
-    image: "/images/service2.avif",
+    image: "/images/Service2.avif",
     title: "Contemporary Dining",
     description:
       "Indulge in modern culinary delights with stylish interiors at Curry Culture.",
     tag: "Dining",
-    href: "/services/contemporary-dining",
+    href: "/premiere",
   },
   {
     id: 3,
-    image: "/images/service3.avif",
+    image: "/images/Service3.avif",
     title: "Bake my cake Bakery",
     description:
       "At Bake My Cake, every creation is made with love. Because a cake is more than dessert — it’s a celebration.",
     tag: "Bakery",
-    href: "/services/bake-my-cake",
+    href: "/premiere",
   },
 ];
 

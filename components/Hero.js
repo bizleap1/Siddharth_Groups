@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Italiana, Barlow } from "next/font/google";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -14,6 +15,7 @@ const slides = [
     location: "CHANDRAPUR",
     title: "SIDDHARTH PREMIERE",
     offer: "Luxury Suite & Deluxe Rooms",
+    link: "/premiere",
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const slides = [
     title: "NAAVA",
     offer:
       "Indulge in a culinary journey that blends tradition with modernity, crafted for discerning palates.",
+    link: "/naava",
   },
   {
     id: 3,
@@ -30,11 +33,13 @@ const slides = [
     title: "OUTDOOR CATERING",
     offer:
       "Siddharth Group also specializes in outdoor catering, offering not just delicious food but complete arrangements.",
+    link: "/outdoor-catering",
   },
 ];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const router = useRouter();
 
   const nextSlide = () =>
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -47,6 +52,10 @@ export default function Hero() {
   }, []);
 
   const slide = slides[current];
+
+  const handleExplore = () => {
+    router.push(slide.link);
+  };
 
   return (
     <section className="relative w-full h-auto md:h-[102vh] -mt-20 overflow-hidden">
@@ -84,6 +93,7 @@ export default function Hero() {
             </p>
 
             <button
+              onClick={handleExplore}
               className={`${barlow.className} mt-6 border border-white text-white px-6 py-2 rounded-md text-base hover:bg-white/20 transition`}
             >
               EXPLORE NOW →
@@ -119,9 +129,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile Text Box with Arrows Inside */}
+      {/* Mobile Text Box */}
       <div className="md:hidden relative z-20 -mt-14 px-4">
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0)] px-6 py-5 text-center border border-gray-500">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow px-6 py-5 text-center border border-gray-500">
           <p
             className={`${barlow.className} text-gray-600 text-xs tracking-[3px] uppercase`}
           >
@@ -141,6 +151,7 @@ export default function Hero() {
           </p>
 
           <button
+            onClick={handleExplore}
             className={`${barlow.className} mt-4 border border-gray-800 text-gray-900 px-5 py-2 rounded-md text-xs hover:bg-gray-900 hover:text-white transition`}
           >
             EXPLORE NOW →
