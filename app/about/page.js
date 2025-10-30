@@ -95,7 +95,7 @@ export default function About() {
             >
               <div className="relative h-56 w-full">
                 <Image
-                  src="/brands/premiere.jpg"
+                  src="/images/Hero3.jpg"
                   alt="Hotel Siddharth Premiere"
                   fill
                   className="object-cover w-full h-full"
@@ -130,7 +130,7 @@ export default function About() {
             >
               <div className="relative h-56 w-full">
                 <Image
-                  src="/brands/naava.jpg"
+                  src="/images/Hero1.avif"
                   alt="Naava Restaurant"
                   fill
                   className="object-cover w-full h-full"
@@ -165,7 +165,7 @@ export default function About() {
             >
               <div className="relative h-56 w-full">
                 <Image
-                  src="/brands/outdoor.jpg"
+                  src="/images/Hero2.avif"
                   alt="Siddharth Outdoor Catering"
                   fill
                   className="object-cover w-full h-full"
