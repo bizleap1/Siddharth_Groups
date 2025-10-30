@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 import FloatingButtons from "../components/FloatingButtons";
 
 export const metadata = {
-  title: "Next.js + Tailwind Boilerplate",
-  description: "Minimal Next.js app with Tailwind CSS",
+  title: "Siddharth Groups",
+  description: "Siddharth Groups",
 };
 
 export default function RootLayout({ children }) {
