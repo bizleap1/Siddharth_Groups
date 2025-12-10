@@ -20,6 +20,7 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Premiere", path: "/premiere" },
     { name: "Naava", path: "/naava" },
+    { name: "Bakery", path: "/bakery" },
     { name: "Outdoor Catering", path: "/outdoor-catering" },
     { name: "Contact", path: "/contact" },
   ];
