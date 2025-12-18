@@ -10,30 +10,30 @@ const barlow = Barlow({ weight: ["400", "600"], subsets: ["latin"] });
 
 export default function About() {
   return (
-    <main className="w-full min-h-screen bg-white">
+    <main className="w-full min-h-screen bg-black text-white">
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full overflow-visible">
         <div className="relative w-full h-[50vh] md:h-[70vh] -mt-[80px]">
           <Image
-            src="/images/Hero2.avif" // replace with your banner
+            src="/images/Hero2.avif"
             alt="About Siddharth Hotels"
             fill
             priority
             className="object-cover object-center w-full"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         {/* Static Floating Card */}
         <div className="relative z-20 flex justify-center">
-          <div className="-mt-[120px] bg-white rounded-2xl shadow-lg border border-gray-200 w-[90%] max-w-4xl p-8 md:p-10 text-center">
+          <div className="-mt-[120px] bg-black rounded-2xl shadow-[0_20px_60px_rgba(212,175,55,0.15)] border border-[#d4af37]/30 w-[90%] max-w-4xl p-8 md:p-10 text-center">
             <h1
-              className={`${italiana.className} text-4xl md:text-5xl text-gray-800 mb-4`}
+              className={`${italiana.className} text-4xl md:text-5xl text-[#f5e6c8] mb-4`}
             >
               About Siddharth Groups
             </h1>
             <p
-              className={`${barlow.className} text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed`}
+              className={`${barlow.className} text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed`}
             >
               Redefining hospitality with a perfect blend of comfort, elegance,
               and culinary excellence across our signature services.
@@ -43,14 +43,14 @@ export default function About() {
       </section>
 
       {/* ================= STORY SECTION ================= */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-black">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className={`${italiana.className} text-4xl md:text-5xl text-gray-800 mb-8`}
+            className={`${italiana.className} text-4xl md:text-5xl text-[#d4af37] mb-8`}
           >
             Our Story
           </motion.h2>
@@ -59,7 +59,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
-            className={`${barlow.className} text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto`}
+            className={`${barlow.className} text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto`}
           >
             Founded with a vision to create memorable experiences, Siddharth
             Hotels has become a name synonymous with excellence in hospitality.
@@ -73,15 +73,15 @@ export default function About() {
         </div>
       </section>
 
-      {/* ================= SERVICES (REPLACED OUR BRANDS) ================= */}
-      <section className="py-20 px-4 bg-gray-50">
+      {/* ================= SERVICES ================= */}
+      <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className={`${italiana.className} text-4xl md:text-5xl text-gray-800 mb-12`}
+            className={`${italiana.className} text-4xl md:text-5xl text-[#d4af37] mb-12`}
           >
             Our Services
           </motion.h2>
@@ -91,7 +91,7 @@ export default function About() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+              className="bg-black border border-[#d4af37]/30 rounded-2xl shadow-[0_10px_40px_rgba(212,175,55,0.12)] overflow-hidden hover:shadow-[0_20px_60px_rgba(212,175,55,0.2)] transition"
             >
               <div className="relative h-56 w-full">
                 <Image
@@ -100,22 +100,23 @@ export default function About() {
                   fill
                   className="object-cover w-full h-full"
                 />
+                <div className="absolute inset-0 bg-black/30" />
               </div>
               <div className="p-6 flex flex-col items-center text-center">
                 <h3
-                  className={`${italiana.className} text-2xl text-gray-800 mb-3`}
+                  className={`${italiana.className} text-2xl text-[#f5e6c8] mb-3`}
                 >
                   Siddharth Premiere
                 </h3>
                 <p
-                  className={`${barlow.className} text-gray-600 text-base leading-relaxed mb-5`}
+                  className={`${barlow.className} text-gray-300 text-base leading-relaxed mb-5`}
                 >
                   A luxurious stay designed for both business and leisure
                   travelers — sophistication meets comfort.
                 </p>
                 <Link
                   href="/premiere"
-                  className="inline-block bg-gray-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-900 transition"
+                  className="inline-block border border-[#d4af37] text-[#d4af37] px-5 py-2 rounded-lg font-semibold hover:bg-[#d4af37] hover:text-black transition"
                 >
                   Know More
                 </Link>
@@ -126,7 +127,7 @@ export default function About() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+              className="bg-black border border-[#d4af37]/30 rounded-2xl shadow-[0_10px_40px_rgba(212,175,55,0.12)] overflow-hidden hover:shadow-[0_20px_60px_rgba(212,175,55,0.2)] transition"
             >
               <div className="relative h-56 w-full">
                 <Image
@@ -135,22 +136,23 @@ export default function About() {
                   fill
                   className="object-cover w-full h-full"
                 />
+                <div className="absolute inset-0 bg-black/30" />
               </div>
               <div className="p-6 flex flex-col items-center text-center">
                 <h3
-                  className={`${italiana.className} text-2xl text-gray-800 mb-3`}
+                  className={`${italiana.className} text-2xl text-[#f5e6c8] mb-3`}
                 >
                   Naava
                 </h3>
                 <p
-                  className={`${barlow.className} text-gray-600 text-base leading-relaxed mb-5`}
+                  className={`${barlow.className} text-gray-300 text-base leading-relaxed mb-5`}
                 >
                   A vibrant dining destination blending modern global flavors
                   with timeless Indian taste.
                 </p>
                 <Link
                   href="/naava"
-                  className="inline-block bg-gray-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-900 transition"
+                  className="inline-block border border-[#d4af37] text-[#d4af37] px-5 py-2 rounded-lg font-semibold hover:bg-[#d4af37] hover:text-black transition"
                 >
                   Know More
                 </Link>
@@ -161,7 +163,7 @@ export default function About() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+              className="bg-black border border-[#d4af37]/30 rounded-2xl shadow-[0_10px_40px_rgba(212,175,55,0.12)] overflow-hidden hover:shadow-[0_20px_60px_rgba(212,175,55,0.2)] transition"
             >
               <div className="relative h-56 w-full">
                 <Image
@@ -170,22 +172,23 @@ export default function About() {
                   fill
                   className="object-cover w-full h-full"
                 />
+                <div className="absolute inset-0 bg-black/30" />
               </div>
               <div className="p-6 flex flex-col items-center text-center">
                 <h3
-                  className={`${italiana.className} text-2xl text-gray-800 mb-3`}
+                  className={`${italiana.className} text-2xl text-[#f5e6c8] mb-3`}
                 >
                   Outdoor Catering
                 </h3>
                 <p
-                  className={`${barlow.className} text-gray-600 text-base leading-relaxed mb-5`}
+                  className={`${barlow.className} text-gray-300 text-base leading-relaxed mb-5`}
                 >
                   Crafting bespoke dining experiences for every occasion —
                   elegant, delicious, unforgettable.
                 </p>
                 <Link
                   href="/outdoor-catering"
-                  className="inline-block bg-gray-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-900 transition"
+                  className="inline-block border border-[#d4af37] text-[#d4af37] px-5 py-2 rounded-lg font-semibold hover:bg-[#d4af37] hover:text-black transition"
                 >
                   Know More
                 </Link>

@@ -31,17 +31,19 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24 text-black w-full overflow-hidden">
+    /* FULL WIDTH BLACK */
+    <section className="bg-black py-16 md:py-24 text-white w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
+
         {/* Heading */}
         <div className="text-center mb-10 md:mb-14">
           <h2
             className={`${italiana.className} text-3xl sm:text-4xl md:text-5xl text-[#d4af37]`}
           >
-            Testimonial
+            Testimonials
           </h2>
           <p
-            className={`${barlow.className} text-gray-600 mt-2 text-base sm:text-lg`}
+            className={`${barlow.className} text-gray-400 mt-2 text-base sm:text-lg`}
           >
             What our guests are saying
           </p>
@@ -62,10 +64,9 @@ export default function Testimonials() {
             {[...reviews, ...reviews].map((review, i) => (
               <div
                 key={i}
-                className="min-w-[250px] sm:min-w-[350px] md:min-w-[500px] bg-white shadow-md sm:shadow-lg rounded-xl border border-gray-200 p-4 sm:p-6 md:p-8"
-              >
+                className="min-w-[250px] sm:min-w-[350px] md:min-w-[500px] bg-[#0b0b0b] rounded-xl border border-[#d4af37]/25 p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-[0_15px_40px_rgba(212,175,55,0.15)] transition-shadow duration-300">
                 <p
-                  className={`${barlow.className} text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6`}
+                  className={`${barlow.className} text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6`}
                 >
                   {review.text}
                 </p>
@@ -73,7 +74,9 @@ export default function Testimonials() {
                   className={`${barlow.className} text-[#d4af37] font-semibold text-sm sm:text-base md:text-lg`}
                 >
                   {review.name}{" "}
-                  <span className="text-gray-500 font-normal">– {review.place}</span>
+                  <span className="text-gray-500 font-normal">
+                    – {review.place}
+                  </span>
                 </p>
               </div>
             ))}
@@ -81,6 +84,7 @@ export default function Testimonials() {
         </div>
       </div>
 
+      {/* Animation */}
       <style jsx global>{`
         @keyframes scroll {
           0% {

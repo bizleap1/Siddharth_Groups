@@ -58,7 +58,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-auto md:h-[102vh] -mt-20 overflow-hidden">
+    <section className="relative w-full h-auto md:h-[102vh] -mt-20 overflow-hidden bg-black">
       {/* Background Image */}
       <div className="relative w-full h-[45vh] md:h-full">
         <Image
@@ -69,32 +69,32 @@ export default function Hero() {
           priority
           className="object-cover object-center transition-all duration-[1200ms] ease-in-out"
         />
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Desktop Text Box */}
         <div className="hidden md:flex absolute inset-0 justify-center items-center z-10">
-          <div className="bg-white/10 backdrop-blur-sm px-12 py-10 rounded-2xl text-center max-w-2xl border border-white/20">
+          <div className="bg-black/40 backdrop-blur-sm px-12 py-10 rounded-2xl text-center max-w-2xl border border-[#d4af37]/30">
             <p
-              className={`${barlow.className} text-white/90 text-sm tracking-[3px] uppercase`}
+              className={`${barlow.className} text-[#d4af37]/90 text-sm tracking-[3px] uppercase`}
             >
               📍 {slide.location}
             </p>
 
             <h1
-              className={`${italiana.className} text-white text-6xl font-normal mt-3 leading-tight drop-shadow-lg`}
+              className={`${italiana.className} text-[#f5e6c8] text-6xl font-normal mt-3 leading-tight drop-shadow-lg`}
             >
               {slide.title}
             </h1>
 
             <p
-              className={`${barlow.className} text-white/90 text-lg mt-3 leading-relaxed`}
+              className={`${barlow.className} text-gray-300 text-lg mt-3 leading-relaxed`}
             >
               {slide.offer}
             </p>
 
             <button
               onClick={handleExplore}
-              className={`${barlow.className} mt-6 border border-white text-white px-6 py-2 rounded-md text-base hover:bg-white/20 transition`}
+              className={`${barlow.className} mt-6 border border-[#d4af37] text-[#d4af37] px-6 py-2 rounded-md text-base hover:bg-[#d4af37] hover:text-black transition`}
             >
               EXPLORE NOW →
             </button>
@@ -104,15 +104,15 @@ export default function Hero() {
         {/* Arrows (Desktop Only) */}
         <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 p-3 rounded-full transition hidden md:block"
+          className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 p-3 rounded-full transition hidden md:block border border-[#d4af37]/40"
         >
-          <ChevronLeft className="text-white w-5 h-5" />
+          <ChevronLeft className="text-[#d4af37] w-5 h-5" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 p-3 rounded-full transition hidden md:block"
+          className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 p-3 rounded-full transition hidden md:block border border-[#d4af37]/40"
         >
-          <ChevronRight className="text-white w-5 h-5" />
+          <ChevronRight className="text-[#d4af37] w-5 h-5" />
         </button>
 
         {/* Dots (Desktop Only) */}
@@ -122,7 +122,7 @@ export default function Hero() {
               key={i}
               onClick={() => setCurrent(i)}
               className={`w-3 h-3 rounded-full ${
-                i === current ? "bg-white" : "bg-white/50"
+                i === current ? "bg-[#d4af37]" : "bg-[#d4af37]/40"
               }`}
             />
           ))}
@@ -131,28 +131,28 @@ export default function Hero() {
 
       {/* Mobile Text Box */}
       <div className="md:hidden relative z-20 -mt-14 px-4">
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow px-6 py-5 text-center border border-gray-500">
+        <div className="bg-black/95 backdrop-blur-sm rounded-2xl shadow px-6 py-5 text-center border border-[#d4af37]/40">
           <p
-            className={`${barlow.className} text-gray-600 text-xs tracking-[3px] uppercase`}
+            className={`${barlow.className} text-[#d4af37]/80 text-xs tracking-[3px] uppercase`}
           >
             📍 {slide.location}
           </p>
 
           <h1
-            className={`${italiana.className} text-gray-900 text-2xl font-normal mt-2 leading-tight`}
+            className={`${italiana.className} text-[#f5e6c8] text-2xl font-normal mt-2 leading-tight`}
           >
             {slide.title}
           </h1>
 
           <p
-            className={`${barlow.className} text-gray-700 text-sm mt-2 leading-relaxed`}
+            className={`${barlow.className} text-gray-300 text-sm mt-2 leading-relaxed`}
           >
             {slide.offer}
           </p>
 
           <button
             onClick={handleExplore}
-            className={`${barlow.className} mt-4 border border-gray-800 text-gray-900 px-5 py-2 rounded-md text-xs hover:bg-gray-900 hover:text-white transition`}
+            className={`${barlow.className} mt-4 border border-[#d4af37] text-[#d4af37] px-5 py-2 rounded-md text-xs hover:bg-[#d4af37] hover:text-black transition`}
           >
             EXPLORE NOW →
           </button>
@@ -161,13 +161,13 @@ export default function Hero() {
           <div className="flex justify-center gap-6 mt-4">
             <button
               onClick={prevSlide}
-              className="bg-gray-900 text-white p-2 rounded-full active:scale-95 transition"
+              className="bg-black border border-[#d4af37]/50 text-[#d4af37] p-2 rounded-full active:scale-95 transition"
             >
               <ChevronLeft size={16} />
             </button>
             <button
               onClick={nextSlide}
-              className="bg-gray-900 text-white p-2 rounded-full active:scale-95 transition"
+              className="bg-black border border-[#d4af37]/50 text-[#d4af37] p-2 rounded-full active:scale-95 transition"
             >
               <ChevronRight size={16} />
             </button>
