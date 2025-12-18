@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Italiana, Barlow } from "next/font/google";
-import Facilities from "../../components/Facilities";
+
 
 const italiana = Italiana({ weight: "400", subsets: ["latin"] });
 const barlow = Barlow({ weight: ["400", "600"], subsets: ["latin"] });
